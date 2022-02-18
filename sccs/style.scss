@@ -1,0 +1,186 @@
+@import "../sccs/_nullstyle";
+
+.wrapper {
+	background-color: rgb(61, 13, 88);
+}
+form {
+	max-width: 550px;
+	margin: 0px auto;
+	color: aliceblue;
+	padding: 30px 0px;
+}
+.form {
+	&__body {
+	}
+
+	&__title {
+		font-size: 40px;
+		font-weight: 700;
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__item {
+		margin: 0px 0px 20px 0px;
+	}
+
+	&__label {
+		font-size: 18px;
+		display: block;
+		margin: 0px 0px 10px 0px;
+	}
+
+	&__input {
+		height: 50px;
+		padding: 0px 20px;
+		border-radius: 5px;
+		width: 100%;
+		font-size: 18px;
+		&:focus {
+			box-shadow: 0 0 15px greenyellow;
+		}
+	}
+
+	&__button {
+		width: 100%;
+		display: flex;
+		border-radius: 20px;
+		justify-content: center;
+		align-items: center;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 2px;
+		background-color: rgb(10, 95, 53);
+		padding: 0px 20px;
+		min-height: 60px;
+		cursor: pointer;
+		color: beige;
+		box-shadow: 0 5px 0 rgb(6, 61, 33);
+		&:hover {
+			background-color: rgb(7, 65, 36);
+		}
+	}
+}
+
+textarea {
+	min-height: 120px;
+	resize: vertical;
+	padding: 20px;
+	line-height: 40px;
+	&:focus {
+		background-color: aliceblue;
+	}
+}
+.options {
+	padding: 10px 0px 0px 0px;
+	&__items {
+		margin: 0px 0px 10px 0px;
+	}
+	&__input {
+		display: none;
+		&:checked + .options__label:after {
+			transform: scale(1);
+		}
+	}
+
+	&__label {
+		font-size: 16px;
+		display: inline-flex;
+		line-height: 150%;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+		&:before {
+			content: "";
+			align-self: flex-start;
+			flex: 0 0 24px;
+			height: 24px;
+			background-color: rgb(236, 223, 234);
+			border-radius: 50%;
+			margin: 0px 10px 0px 0px;
+		}
+		&:after {
+			transition: transform 0.3s ease 0s;
+			content: "";
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			width: 16px;
+			height: 16px;
+			background-color: rgb(61, 27, 61);
+			border-radius: 50%;
+			transform: scale(0);
+		}
+	}
+}
+.select {
+}
+.file {
+	&__item {
+		position: relative;
+	}
+
+	&__input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 120px;
+		height: 100%;
+		opacity: 0;
+		font-size: 0;
+		cursor: pointer;
+	}
+
+	&__button {
+		display: inline-flex;
+		min-height: 40px;
+		border-radius: 30px;
+		justify-content: center;
+		align-items: center;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		background-color: rgb(10, 95, 53);
+		box-shadow: 0 5px rgb(7, 65, 36);
+		padding: 0px 20px;
+		&:hover {
+			background-color: rgb(7, 65, 36);
+		}
+	}
+
+	&__preview {
+		display: inline-block;
+		max-width: 100px;
+	}
+}
+.checkbox {
+	&__input {
+		display: none;
+		&:checked + .checkbox__label::after {
+			transform: scale(1);
+		}
+	}
+
+	&__label {
+		display: inline-flex;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+		&::before {
+			content: "";
+			align-self: flex-start;
+			flex: 0 0 24px;
+			height: 24px;
+			background-color: rgb(236, 223, 234);
+			margin: 0px 10px 0px 0px;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 4px;
+			left: 4px;
+			width: 16px;
+			height: 16px;
+			background-color: rgb(61, 27, 61);
+			transform: scale(0);
+		}
+	}
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Создание сайтов. Быстро, надежно.</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<form action="#" id="form" class="form__body">
+			<h1 class="form__title">Ваши данные:</h1>
+			<div class="form__item">
+				<label for="formName" class="form__label">Имя*</label>
+				<div class="form__icon icon__form"></div>
+				<input id="formName" type="text" name="name" class="form__input">
+			</div>
+			<div class="form__item">
+				<label for="formEmail" class="form__label">E-mail*</label>
+				<input id="formEmail" type="text" name="email" class="form__input">
+			</div>
+			<div class="form__item">
+				<div class="form__title">Золото или серебро?</div>
+				<div class="options">
+					<div class="options__items">
+						<input id="formGold" checked type="radio" value="gold" name="metal" class="options__input">
+						<label for="formGold" class="options__label"><span>Золото</span></label>
+					</div>
+					<div class="options__items">
+						<input id="formSilver" type="radio" value="silver" name="metal" class="options__input">
+						<label for="formSilver" class="options__label"><span>Серебро</span></label>
+					</div>
+				</div>
+			</div>
+			<div class="form__item">
+				<label for="formComment" class="form__label">Комментарий:</label>
+				<textarea name="comment" id="formComment" class="form__input"></textarea>
+			</div>
+			<div class="form__item">
+				<label class="form__label">Вид украшения</label>
+				<select name="decoration" class="select">
+					<option value="кольца, браслеты">Кольца</option>
+					<option value="цепочки, ожерелья, кулоны">Ожерелья</option>
+					<option value="серьги, каффы">Серьги</option>
+				</select>
+			</div>
+			<div class="form__item">
+				<div class="form__label">Прикрепите фото</div>
+				<div class="file">
+					<div class="file__item">
+						<input id="formImage" accept=" jpg, png, gif" type="file" name="image" class="file__input">
+						<div class="file__button">Выбрать</div>
+					</div>
+					<div class="file__preview"></div>
+				</div>
+			</div>
+			<div class="form__item">
+				<div class="checkbox">
+					<input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
+					<label for="formAgreement" class="checkbox__label"><span>Я даю свое согласие на обработку персональных
+							данных.</span></label>
+				</div>
+			</div>
+			<button type="submit" class="form__button">Отправить</button>
+		</form>
+	</div>
+
+</body>
+
+</html>
